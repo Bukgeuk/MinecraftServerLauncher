@@ -296,7 +296,7 @@ void setting_two()
 
 		cin >> input;
 
-		if (input = -1)
+		if (input == -1)
 			return;
 
 		if (input <= (getmemoryinfo() / 2))
