@@ -110,11 +110,21 @@ void start()
 	system("cls");
 	if (BukkitName == "NULL")
 	{
-		cout << endl << endl;
-		cout << "	[ ERROR ] : 핵심 파일의 이름을 설정해 주세요" << endl;
-		cout << endl << endl;
-		_getch();
-		return;
+		string name = getjarfile();
+		if (name == "NULL")
+		{
+			BukkitName = "NULL";
+			system("cls");
+			cout << endl << endl;
+			cout << "	[ ERROR ] : 핵심 파일을 찾을 수 없습니다" << endl;
+			cout << endl << endl;
+			_getch();
+			return;
+		}
+		else
+		{
+			BukkitName = name;
+		}
 	}
 
 	string RamString;
