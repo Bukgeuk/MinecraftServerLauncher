@@ -300,7 +300,15 @@ void setting_two()
 			return;
 
 		if (input <= (getmemoryinfo() / 2))
+		{
+			Ram = input;
+			system("cls");
+			cout << endl << endl;
+			cout << "	[ INFO ] : 램 할당량을 \"" + to_string(input) + "GB\" 로 설정하였습니다" << endl;
+			cout << endl << endl;
+			_getch();
 			break;
+		}
 		else
 		{
 			system("cls");
@@ -310,8 +318,6 @@ void setting_two()
 			_getch();
 		}
 	} while (1);
-
-	Ram = input;
 }
 
 void setting_three()
@@ -388,7 +394,7 @@ void setting_five()
 {
 	system("cls");
 	cout << endl << endl;
-	cout << "	정말 초기화 하시겠습니까? (Y,N)";
+	cout << "	정말 초기화 하시겠습니까? (Y,N) ";
 
 	char input;
 
@@ -396,6 +402,9 @@ void setting_five()
 	{
 		input = _getch();
 	} while (input != 'n' && input != 'y' && input != 'N' && input != 'Y');
+
+	if (input == 'n' || input == 'N')
+		return;
 
 	UsingAutoRam = false;
 	Ram = 1;
