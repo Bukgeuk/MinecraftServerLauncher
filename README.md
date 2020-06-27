@@ -1,3 +1,3 @@
 # MinecraftServerLauncher
-Minecraft Server Launcher
+A Minecraft Server Launcher
 
